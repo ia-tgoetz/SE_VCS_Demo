@@ -14,8 +14,32 @@ For this demo, use the following
 
 Open a terminal at that directory.
 Run the following command to create a git repo there:
-''''git init .''''
-Then run add the remote repo:
-''''git remote add origin https://github.com/ia-akoch/SE_VCS_Demo''''
-Next add the locally tracked files and commit them to the local repo
 ''''
+git init .
+''''
+
+Create a remote remote repo in GitHub
+
+Then run add the remote repo:
+''''
+git remote add origin {Repo URL}
+''''
+
+### Add to staging and commit to remote repo
+
+Next add the locally tracked files and commit them to the local repo with the following commands:
+''''
+git add .
+git commit -m "initial commit"
+''''
+
+## Part 2 - Edit a resource and push changes
+
+### Edit resource
+
+Create a resource by:
+- Start Ignition gateway (if not started already)
+- Open designer
+- Create a Perspective view and add a label with whatever text you want in it
+
+*Note: If using VScode, this is a good time to jump back into that window and show the
