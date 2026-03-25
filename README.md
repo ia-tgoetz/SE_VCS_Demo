@@ -22,7 +22,7 @@ Create a remote remote repo in GitHub
 
 Then run add the remote repo:
 ```
-git remote add origin {Repo URL}
+git remote add origin <Repo URL>
 ```
 
 ### Add to staging and commit to remote repo
@@ -66,4 +66,15 @@ Open the repo in Github to see your changes reflected there
 
 ## Part 3 - Clone to Prod environment
 
-Create a new directory for a production environment
+Move to your production environment
+
+Create a local repo and connect to the remote repo:
+```
+git init .
+git add .
+git commit -m "Initial commit"
+git remote add origin <Repo URL>
+
+```
+
+Update env file and
