@@ -68,13 +68,20 @@ Open the repo in Github to see your changes reflected there
 
 Move to your production environment
 
+### Add local repo for Prod
+####  Option A
 Create a local repo and connect to the remote repo:
 ```
 git init .
 git add .
 git commit -m "Initial commit"
 git remote add origin <Repo URL>
-
+git pull
 ```
 
-Update env file and
+#### Option B
+If no environment exist yet, create the directory and clone the remote repo with the following command:
+```
+git clone <repo URL> <Local directory path>
+```
+Update env file and to match new environment
