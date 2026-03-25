@@ -42,4 +42,18 @@ Create a resource by:
 - Open designer
 - Create a Perspective view and add a label with whatever text you want in it
 
-*Note: If using VScode, this is a good time to jump back into that window and show the
+In the command line run the following command to view changes:
+''''
+git status
+''''
+*Note: If using VScode, this is a good time to jump back into that window and show the diffs for the actual files in the source control extension
+
+### Commit resources and push to remote repo
+
+In the command line run the following commands to commit those resources and push to the remote repo:
+''''
+git add .
+git commit -m "Added Perspective view"
+git push -u origin master
+''''
+
