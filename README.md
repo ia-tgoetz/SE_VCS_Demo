@@ -42,7 +42,7 @@ Create a resource by:
 - Open designer
 - Create a Perspective view and add a label with whatever text you want in it
 
-In the command line run the following command to view changes:
+In the command line run the following command to view changed files:
 ```
 git status
 ```
@@ -57,3 +57,13 @@ git commit -m "Added Perspective view"
 git push -u origin master
 ```
 
+To view the localrepo as up to date run the command:
+```
+git status
+```
+
+Open the repo in Github to see your changes reflected there
+
+## Part 3 - Clone to Prod environment
+
+Create a new directory for a production environment
