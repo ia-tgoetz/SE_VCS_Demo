@@ -14,24 +14,24 @@ For this demo, use the following
 
 Open a terminal at that directory.
 Run the following command to create a git repo there:
-''''
+```
 git init .
-''''
+```
 
 Create a remote remote repo in GitHub
 
 Then run add the remote repo:
-''''
+```
 git remote add origin {Repo URL}
-''''
+```
 
 ### Add to staging and commit to remote repo
 
 Next add the locally tracked files and commit them to the local repo with the following commands:
-''''
+```
 git add .
 git commit -m "initial commit"
-''''
+```
 
 ## Part 2 - Edit a resource and push changes
 
@@ -43,17 +43,17 @@ Create a resource by:
 - Create a Perspective view and add a label with whatever text you want in it
 
 In the command line run the following command to view changes:
-''''
+```
 git status
-''''
+```
 *Note: If using VScode, this is a good time to jump back into that window and show the diffs for the actual files in the source control extension
 
 ### Commit resources and push to remote repo
 
 In the command line run the following commands to commit those resources and push to the remote repo:
-''''
+```
 git add .
 git commit -m "Added Perspective view"
 git push -u origin master
-''''
+```
 
