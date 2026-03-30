@@ -36,11 +36,11 @@ services:
       GATEWAY_ADMIN_PASSWORD: password
       IGNITION_EDITION: standard
       TZ: ${TZ:-America/Chicago}
-    # command: >
-    #   -n ${IGN_NAME:-demo-vcs-modes-dev}
-    #   -h 80
-    #   -s 443
-    #   -a ${IGN_NAME:-demo-vcs-modes-dev}.localtest.me
+    command: >
+      -n ${IGN_NAME:-demo-vcs-modes-dev}
+      -h 80
+      -s 443
+      -a ${IGN_NAME:-demo-vcs-modes-dev}.localtest.me
 #      -Dignition.config.mode=dev
     networks:
       # - vcsDemoNet
