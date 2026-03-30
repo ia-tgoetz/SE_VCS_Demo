@@ -85,3 +85,27 @@ If no environment exist yet, create the directory and clone the remote repo with
 git clone <repo URL> <Local directory path>
 ```
 Update env file and to match new environment
+
+### Let's see a change all the way through!
+#### Add a change to the local dev environment
+Go back to the dev system and open the gateway web page.
+This time let's add a programmable simulator device that users the Dairy Sim program.
+Run the following commands to see what file has changed from our change, and to add and commit it to the local repo:
+```
+git status
+git add .
+git commit -m "added a programmable simulator device connection"
+```
+
+#### Push the new change to the remote repo
+Let's push to the remote repo again with the following commands:
+```
+git push -u origin master
+```
+Now you can go to the remote repo and view the changes there if desired
+
+#### Pull the new change to our prod environment
+Now back on the prod environment run the following command:
+git pull
+
+## Part 4 Make change in dev environment 
