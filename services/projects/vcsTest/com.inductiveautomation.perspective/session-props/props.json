@@ -48,15 +48,28 @@
     "props.lastActivity": {
       "access": "SYSTEM",
       "persistent": false
+    },
+    "props.offline.capable": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.offline.enabled": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.offline.lastSynced": {
+      "access": "SYSTEM",
+      "persistent": false
     }
   },
   "props": {
-    "address": "172.18.0.5",
+    "address": "172.20.0.2",
     "device": {},
     "geolocation": {},
     "locale": "en-US",
+    "offline": {},
     "securityLevels": [],
     "theme": "light-cool",
-    "timeZoneId": "America/Los_Angeles"
+    "timeZoneId": "America/Chicago"
   }
 }

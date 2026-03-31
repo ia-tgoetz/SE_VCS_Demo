@@ -135,7 +135,19 @@ Once the scan is done running you can check the devices again and see your progr
 ## Part 5 - Changes in feature branches 
 ### Create a feature branch on the dev environment
 Lets create a feature branch for some changes. We'll add a tag and a label to display it on a view.
-Run the following command to create a feature branch:
+Make sure you are up to date with the master branch first.
+If not up to date with the origin then push or pull any changes.
+Run the following command to create a feature branch and push it to the remote repo with the following commands:
+```
+git checkout -b featureTest
+git push -u origin featureTest
+```
+featureTest is the name of our new branch. Go to GitHub to view new branch there.
 
+### Add the new resources in designer
+Open a designer window to this gateway.
+Add a new Motor tag structure from the Dairy Simulator. 
+Create a new view and add a label to it.
+Drag the amps from that motor's tags over to the label and save the designer.
 
 ## Part 6 - 
