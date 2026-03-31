@@ -121,11 +121,21 @@ Now you can go to the remote repo and view the changes there if desired
 
 #### Pull the new change to our prod environment
 Now back on the prod environment run the following command:
+```
 git pull origin master
+```
+
+Because the file system has been updated and not the running configuration we will need to trigger a file system scan. This will cause our changes to take effect on the actual running gateway config. There are 2 standard methods to run a file system scan:
+1. From the gateway UI. Navigate to Platform>Overview and select the "Scan File System" button in the top right.
+2. From the gateway API. send a Post to the endpoint: http://<gateway-URL>/data/api/v1/scan/config
+
+Once the scan is done running you can check the devices again and see your programmable device simulator there.
 
 
 ## Part 5 - Changes in feature branches 
-
+### Create a feature branch on the dev environment
+Lets create a feature branch for some changes. We'll add a tag and a label to display it on a view.
+Run the following command to create a feature branch:
 
 
 ## Part 6 - 
