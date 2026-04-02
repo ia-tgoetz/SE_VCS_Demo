@@ -170,12 +170,21 @@ git pull origin master
 ```
 Run the file system scan again. This time for both the config and project files:
 - config
-    - UI: Platform>Overview
-    - API: http://<gateway-URL>/data/api/v1/scan/config
+    - UI: 
+        Platform>Overview
+    - API: 
+        ```
+        http://<gateway-URL>/data/api/v1/scan/config
+        ```
+
 - projects
-    - UI: Platform>Projects
-    - API: http://<gateway-URL>/data/api/v1/scan/projects
-    
+    - UI: 
+        Platform>Projects
+    - API: 
+        ```
+        http://<gateway-URL>/data/api/v1/scan/projects
+        ```
+
 Open the project on the prod environment to view changes.
 
 
