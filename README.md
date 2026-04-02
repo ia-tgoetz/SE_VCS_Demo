@@ -144,10 +144,38 @@ git push -u origin featureTest
 ```
 featureTest is the name of our new branch. Go to GitHub to view new branch there.
 
-### Add the new resources in designer
+### Add the new resources in designer and push to remote branch
 Open a designer window to this gateway.
 Add a new Motor tag structure from the Dairy Simulator. 
 Create a new view and add a label to it.
 Drag the amps from that motor's tags over to the label and save the designer.
+Now checking the git status will show changes made to some files as well as some new files to track.
+Run the Git add and commit again to commit all those changes locally.
+Then run the following command to push those changes to the remote repo.
+```
+git push origin featureTest
+```
 
-## Part 6 - 
+### Pull request and merge in GitHub
+Then check GitHub. You will see that there are new changes in the featureTest branch.
+Review those changes and create a pull request.
+It should find no conflicts and be allowed to merge. 
+Select Merge pull request.
+GitHub will tell you that the featureTest branch can now be safely deleted. Go ahead and delete the branch.
+
+### Pull those changes to the prod environment
+In the prod environment run the following command to pull all the newly merged changes:
+```
+git pull origin master
+```
+Run the file system scan again. This time for both the config and project files:
+- config
+    - UI: Platform>Overview
+    - API: http://<gateway-URL>/data/api/v1/scan/config
+- projects
+    - UI: Platform>Projects
+    - API: http://<gateway-URL>/data/api/v1/scan/projects
+    
+Open the project on the prod environment to view changes.
+
+
