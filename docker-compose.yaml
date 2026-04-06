@@ -19,8 +19,8 @@ services:
     container_name: ${IGN_NAME:-demo-vcs-modes-dev}
     pull_policy: always
     restart: always
-    ports:
-      - ${IGN_PORT:-8089}:8088
+    # ports:
+    #   - ${IGN_PORT:-8089}:8088
     volumes:
       - ign-demo-vcs-modes-data:/usr/local/bin/ignition/data
       - ign-demo-vcs-modes-resources:/usr/local/bin/ignition/data/config/resources
@@ -57,8 +57,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USERNAME:-admin}
       POSTGRES_DB: ${POSTGRES_NAME:-postgres}
       TZ: ${TZ:-America/Chicago}
-    ports:
-     - ${POSTGRES_PORT:-5432}:5432
+    # ports:
+    #  - ${POSTGRES_PORT:-5432}:5432
     volumes:
       - postgresVcsDemo:/var/lib/postgresql/data
     networks:
@@ -67,7 +67,7 @@ services:
 networks:
   vcsProxy:
     external: true
-    name: vcsProxy
+    name: proxy
 
 volumes:
   ign-demo-vcs-modes-data:
