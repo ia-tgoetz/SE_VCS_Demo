@@ -15,7 +15,11 @@
       "paramDirection": "input"
     }
   },
-  "props": {},
+  "props": {
+    "defaultSize": {
+      "width": 887
+    }
+  },
   "root": {
     "children": [
       {
@@ -37,49 +41,60 @@
       },
       {
         "meta": {
-          "hasDelegate": true,
-          "name": "Welcome"
+          "name": "FlexRepeater"
         },
         "position": {
-          "basis": "20px",
-          "shrink": 0
-        },
-        "props": {
-          "style": {
-            "classes": "Page/Bold Page/Margins Page/Text"
-          },
-          "text": "Welcome to Perspective!"
-        },
-        "type": "ia.display.label"
-      },
-      {
-        "meta": {
-          "hasDelegate": true,
-          "name": "Description"
-        },
-        "position": {
-          "shrink": 0
-        },
-        "props": {
-          "style": {
-            "classes": "Page/Text Page/Margins"
-          },
-          "text": "The skeleton project is intended to help you get started with Perspective. The project is designed to be mobile-responsive and fully utilizes styles. Feel free to modify as desired."
-        },
-        "type": "ia.display.label"
-      },
-      {
-        "meta": {
-          "name": "CoordinateContainer"
-        },
-        "position": {
+          "basis": "320px",
           "grow": 1
         },
-        "type": "ia.container.coord"
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.TankInstances"
+              },
+              "transforms": [
+                {
+                  "code": "\tinstances\u003d[]\n\tfor instance in value:\n\t\tinstancePath\u003dinstance[\u0027fullPath\u0027]\n\t\tinstances.append({\n\t\t  \"instancePath\": instancePath\n\t\t})\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "elementPosition": {
+            "basis": "auto",
+            "grow": 0,
+            "shrink": 0
+          },
+          "path": "Page/Embedded/TankTemplate",
+          "wrap": "wrap"
+        },
+        "type": "ia.display.flex-repeater"
       }
     ],
     "meta": {
       "name": "root"
+    },
+    "propConfig": {
+      "custom.TankInstances": {
+        "binding": {
+          "config": {
+            "expression": "1"
+          },
+          "transforms": [
+            {
+              "code": "\tfilter\u003d{\n\t  \"tagType\": \"UdtInstance\",\n\t  \"typeId\": \"Tank\"}\n\n\treturn system.tag.browse(\"[default]\",filter)",
+              "type": "script"
+            }
+          ],
+          "type": "expr"
+        }
+      }
     },
     "props": {
       "direction": "column",

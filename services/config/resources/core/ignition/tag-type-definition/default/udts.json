@@ -62,6 +62,7 @@
         "dataType": "Float4",
         "name": "temp_PV",
         "tagType": "AtomicTag",
+        "engUnit": "°F",
         "opcServer": "Ignition OPC UA Server"
       },
       {
