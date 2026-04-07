@@ -128,8 +128,11 @@
                 "binding": {
                   "config": {
                     "fallbackDelay": 2.5,
-                    "mode": "direct",
-                    "tagPath": "[default]Tank100/temp_PV"
+                    "mode": "indirect",
+                    "references": {
+                      "instancePath": "{view.params.instancePath}"
+                    },
+                    "tagPath": "{instancePath}/temp_PV"
                   },
                   "transforms": [
                     {
@@ -207,8 +210,11 @@
                       "config": {
                         "bidirectional": true,
                         "fallbackDelay": 2.5,
-                        "mode": "direct",
-                        "tagPath": "[default]Tank100/temp_SP"
+                        "mode": "indirect",
+                        "references": {
+                          "instancePath": "{view.params.instancePath}"
+                        },
+                        "tagPath": "{instancePath}/temp_SP"
                       },
                       "type": "tag"
                     }
@@ -233,8 +239,11 @@
                       "config": {
                         "bidirectional": true,
                         "fallbackDelay": 2.5,
-                        "mode": "direct",
-                        "tagPath": "[default]Tank100/temp_PV.EngUnit"
+                        "mode": "indirect",
+                        "references": {
+                          "instancePath": "{view.params.instancePath}"
+                        },
+                        "tagPath": "{instancePath}/temp_PV.EngUnit"
                       },
                       "type": "tag"
                     }
