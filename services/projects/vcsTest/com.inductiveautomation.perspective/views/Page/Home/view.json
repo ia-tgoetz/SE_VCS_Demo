@@ -17,7 +17,8 @@
   },
   "props": {
     "defaultSize": {
-      "width": 887
+      "height": 864,
+      "width": 876
     }
   },
   "root": {
@@ -84,7 +85,7 @@
       "custom.TankInstances": {
         "binding": {
           "config": {
-            "expression": "1"
+            "expression": "now(10000)"
           },
           "transforms": [
             {

@@ -72,6 +72,42 @@
           }
         },
         "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "BGjhVpWl",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "title": "Scan Configs and Projects",
+                "type": "open",
+                "viewPath": "Page/Embedded/scanFileSystem",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon_0"
+        },
+        "position": {
+          "basis": "24px"
+        },
+        "props": {
+          "path": "material/refresh",
+          "style": {
+            "cursor": "pointer",
+            "marginRight": "10px"
+          }
+        },
+        "type": "ia.display.icon"
       }
     ],
     "meta": {
