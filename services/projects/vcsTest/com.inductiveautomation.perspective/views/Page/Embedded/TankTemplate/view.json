@@ -367,6 +367,10 @@
       "direction": "column",
       "style": {
         "backgroundColor": "--neutral-30",
+        "borderBottomLeftRadius": "8px",
+        "borderBottomRightRadius": "8px",
+        "borderTopLeftRadius": "8px",
+        "borderTopRightRadius": "8px",
         "margin": "4px"
       }
     },
